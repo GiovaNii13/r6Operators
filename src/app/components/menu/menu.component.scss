@@ -1,0 +1,49 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    flex-direction: column;
+
+
+    h2 {
+        color: whitesmoke;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 24px;
+        color: white;
+    }
+
+    a {
+        font-size: 20px;
+        color: white;
+        margin-bottom: 100px;
+        &:hover {
+            border-bottom: solid 2px aqua;
+            cursor: pointer;
+        }
+    }
+     .menu__maps {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        h3 {
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        .maps__image {
+            flex-wrap: wrap;
+            img {
+                margin: 10px;
+                
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+     }
+}

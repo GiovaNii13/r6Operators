@@ -1,0 +1,31 @@
+.header {
+    height: 100px;
+    width: 100%;
+    
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        margin-left: 3rem;
+    }
+
+    .header__links {
+        margin-right: 10rem;
+        display: flex;
+        width: 150px;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            color: whitesmoke;
+            transition: border-bottom 0.4s ease;
+            &:hover {
+                border-bottom: 2px solid aqua;
+                cursor: pointer;
+            }
+        }
+    }
+}
