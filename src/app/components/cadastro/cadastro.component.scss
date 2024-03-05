@@ -1,0 +1,28 @@
+.container__cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+
+    .caixa__cadastro {
+        border-radius: 25px;
+        width: 50vw;
+        height: 75vh;
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 15px 35px;
+
+        .titulo__cadastro {
+           hgroup {
+            max-width: 200px;
+            display: flex;
+            align-items: center;
+            gap: 10px;      
+            margin-bottom: 20px;
+            h3 {
+                margin-top: 10px;
+            }
+           }
+        }
+    }
+}

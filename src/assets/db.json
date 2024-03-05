@@ -3,6 +3,8 @@
         {
             "nome": "giovani",
             "sobrenome": "alves nunes",
+            "email": "giovani.teste@gmail.com",
+            "senha": "Teste123",
             "endereco": {
                 "rua": "Naubert da Silva Braga",
                 "numero": "29",

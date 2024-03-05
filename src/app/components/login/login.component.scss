@@ -1,0 +1,30 @@
+
+
+.container__login {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container__login-bg {
+        border-radius: 15px;
+        width: 650px;
+        height: 350px;
+
+        .caixa__login--img {
+            display: flex;
+            justify-content: center;
+            column-gap: 70px;
+            align-items: center;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.4);
+            input {
+                background-color: whitesmoke;
+                &::placeholder {
+                    color: rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+    }
+}

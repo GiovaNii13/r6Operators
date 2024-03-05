@@ -1,7 +1,7 @@
 .header {
-    height: 100px;
+    height: 60px;
     width: 100%;
-    
+    background-color: rgba(255, 255, 255, 0.2);
     top: 0;
     left: 0;
     z-index: 1000;
@@ -11,6 +11,11 @@
 
     img {
         margin-left: 3rem;
+        transition: transform 0.3s ease;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
     }
 
     .header__links {
@@ -19,9 +24,26 @@
         width: 150px;
         justify-content: space-between;
         align-items: center;
-        p {
+        a {
+            text-decoration: none;
             color: whitesmoke;
-            transition: border-bottom 0.4s ease;
+            .header__links {
+                margin-right: 10rem;
+                display: flex;
+                width: 150px;
+                justify-content: space-between;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    color: whitesmoke;
+                    border-bottom: 2px solid transparent;
+                    transition: border-bottom 0.4s ease;
+                    &:hover {
+                        border-color: aqua;
+                        cursor: pointer;
+                    }
+                }
+            }
             &:hover {
                 border-bottom: 2px solid aqua;
                 cursor: pointer;
