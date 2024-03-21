@@ -4,20 +4,24 @@
             <img src="../../../assets/images/sledgeLogin.png" width="200px" alt="">
             <div class="caixa__login--input">
                 <h3>Login</h3>
-                <form>
+                <form novalidate [formGroup]="formularioLogin" (ngSubmit)="loginSubmit()">
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email</label>
-                      <input placeholder="exemplo@email.com" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input placeholder="exemplo@email.com" type="email" class="form-control" [ngClass]="aplicaCssErro('email')"
+                      formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Senha</label>
-                      <input placeholder="Digite sua senha" type="password" class="form-control" id="exampleInputPassword1">
+                      <input placeholder="Digite sua senha" type="password" class="form-control" [ngClass]="aplicaCssErro('senha')"
+                       id="exampleInputPassword1" formControlName="senha">
                     </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <div class="alert alert-danger was-validated" *ngIf="usuarioInvalido">
+                      Email ou senha inválidos!
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="alert alert-danger was-validated" *ngIf="loginInvalido">
+                      Preencha todos os campos de Login corretamente!
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
                   </form>
             </div>
         </div>

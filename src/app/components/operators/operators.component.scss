@@ -1,0 +1,236 @@
+.container__operators {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    .caixa__operators {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 50px;
+
+        .hgroup {
+            color: whitesmoke;
+            max-width: 70vw;
+            display: flex;
+            column-gap: 10px;
+            margin: 45px 0 25px 0;
+        }
+
+        .search__operator {
+            .button__search {
+                border: 2px solid aqua;
+                color: whitesmoke;
+                transition: transform 0.3s ease;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+            .button__filter {
+                margin-left: 10px;
+                color: aqua;
+                svg {
+                    width: 25px;
+                    fill: whitesmoke;
+                }
+                transition: transform 0.3s ease;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+
+            .dropdown-item {
+                transition: transform 0.3s ease;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.01);
+                }
+            }
+
+            .ativo {
+                background-color: #0D6EFD;
+                color: whitesmoke;
+            }
+
+            
+
+        }
+    }
+
+    .card__operator {
+        text-align: center;
+        max-width: 230px;
+        max-height: 250px;
+        background-color: transparent;
+        border: 2px solid whitesmoke;
+        transition: transform 0.3s ease;
+        box-shadow: 0px 0px 48px 10px rgb(90, 90, 90);
+        &:hover {
+            transform: scale(1.1);
+            border-color: aqua;
+            text-decoration: color(aqua);
+            cursor: pointer;
+        }
+    }
+
+    .detalhes-operador {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9); 
+        z-index: 9998;
+      }
+
+    .card__details {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        background-color: transparent;
+        width: 350px;
+        height: 300px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        padding-bottom: 0;
+
+        .card-body {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin-top: -5px;
+            background-color: white;
+          }
+
+          .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            background: none;
+            border: none;
+            outline: none;
+            transition: transform 0.3s ease;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.3);
+            }
+          }
+
+          .favorite {
+            right: 10px;
+            position: absolute;
+            top: 310px;
+            transition: transform 0.3s ease;
+            &:hover {
+                cursor: pointer;
+                fill: goldenrod;
+                transform: scale(1.4);
+            }
+          }
+
+
+    }
+
+    input::-webkit-search-cancel-button {
+        cursor: pointer;
+      }
+      
+      input::-webkit-search-decoration,
+      input::-webkit-search-results-button,
+      input::-webkit-search-results-decoration {
+        cursor: pointer; 
+      }
+      
+      input[type="search"]::-moz-search-cancel-button {
+        cursor: pointer;
+      }
+      
+      input[type="search"]::-ms-clear {
+        cursor: pointer; 
+      }
+      
+      input[type="search"]:hover::-webkit-search-cancel-button,
+      input[type="search"]:hover::-moz-search-cancel-button,
+      input[type="search"]:hover::-ms-clear {
+        display: inline-block;
+        cursor: pointer;
+      }
+
+
+
+}
+
+@media screen and (max-width: 767px) {
+    .caixa__operators {
+        width: 100vw;
+        .hgroup {
+            width: 400px;
+            display: flex;
+            column-gap: 0
+        }
+
+        .search__operator {
+            input {
+                display: flex;
+                flex-direction: row;
+                margin-left: -100px;
+                width: 250px !important;
+            }
+
+            
+
+            .button__search {
+                padding: 5px;
+                font-size: 15px;
+            }
+
+            .button__filter {
+                padding: 3px !important;
+            }
+        }
+    }
+
+   .container {
+    display: flex;
+    flex-wrap: wrap;
+    .cards {
+        width: 200px;
+    }
+   }
+
+   .dropdown-center {
+    position: relative;
+    left: auto; 
+    right: 0; 
+    text-align: left;
+    margin-top: 10px;
+    
+    .dropdown-menu {
+        left: auto; 
+        right: -140%;
+    }
+}
+
+   
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .input__filter {
+        margin-left: -60px;
+        width: 500px !important;
+    }
+}

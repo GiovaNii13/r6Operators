@@ -1,8 +1,52 @@
-<div class="header">
+<div class="header" *ngIf="(usuarioLogado$ | async) === false">
     <img src="../../../assets/images/bannerBlack.png" alt="Banner Rainbow Six" width="170px" routerLink="/">
     <div class="header__links">
-        <a routerLink="login">Login</a>
-        <a routerLink="cadastro">Cadastre-se</a>
+        <a routerLinkActive="active" routerLink="login">Login</a>
+        <a routerLinkActive="active" routerLink="cadastro">Cadastre-se</a>
+    </div>    
+  </div>
+
+  <div class="header__logado" *ngIf="(usuarioLogado$ | async) === true">
+    <img src="../../../assets/images/bannerBlack.png" alt="Banner Rainbow Six" width="170px" routerLink="home">
+    <div class="header__links--logado">
+        <a routerLinkActive="active" routerLink="operadores">Operadores</a>
+        <a routerLinkActive="active" routerLink="mapas">Mapas</a>
+  
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: transparent; border: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item" (click)="openEdit()">Editar perfil</li>
+                <li class="dropdown-item" (click)="changeLogOut()">Sair</li>
+                <li class="dropdown-item" style="color: red;" (click)="openDelete()">Deletar conta</li>
+            </ul>
+        </div>
     </div>
+  
+      <app-edit-user *ngIf="editOn" (close)="closeEdit()" class="container__edit">
+      </app-edit-user>
+
+      <div class="overlay" *ngIf="editOn || logOut || deleteOn"></div>
+
+      <div class="logOut" *ngIf="logOut">
+        <p>Tem certeza que deseja sair?</p>
+        <div class="btns__logOut">
+            <button type="button" class="btn btn-success" (click)="sair()">Sim</button>
+            <button type="button" class="btn btn-danger" (click)="changeLogOut()">Cancelar</button>
+        </div>
+      </div>
+
+      <div class="delete" *ngIf="deleteOn">
+        <p>Tem certeza que deseja excluir sua conta?</p>
+        <div class="btns__delete">
+            <button type="button" class="btn btn-success" (click)="deletar()">Sim</button>
+            <button type="button" class="btn btn-danger" (click)="closeDelete()">Cancelar</button>
+        </div>
+      </div>
     
-</div>
+  </div>
+  

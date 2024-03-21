@@ -1,0 +1,22 @@
+<div class="container__mapas">
+    <div class="titulo__mapas">
+        <h3>Mapas disponíveis no modo ranqueado</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 mb-4 cards" *ngFor="let mapa of mapas">
+                        <div class="card h-100 card__mapa">
+                            <img [src]="mapa.imagem" class="card-img-top" alt="{{ mapa.nome }}" >
+                            <div class="card-body">
+                                <h5 class="card-title text-light">{{ mapa.nome }}</h5>
+                                <p class="card-text text-light">{{ mapa.localizacao }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

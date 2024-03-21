@@ -1,0 +1,109 @@
+.home {
+    color: whitesmoke;
+    margin: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .home__titulo {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .sobre {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 100px;
+
+        .sobre__imagem {
+            img {
+                border-radius: 20px;
+                box-shadow: 0px 0px 48px 10px rgb(38, 38, 38);
+            }
+        }
+    }
+
+    .plataformas {
+        margin-top: 50px;
+        max-width: 800px;
+
+        .plataformas__imagens {
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+
+        .sobre {
+            display: flex;
+            flex-direction: column-reverse;
+            img {
+                max-width: 350px;
+                margin-top: -15px;
+                margin-bottom: 20px;
+            }
+            .sobre__texto {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                
+            }
+        }
+
+        .plataformas { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h4 {
+                font-size: 30px;
+            }
+        }
+        .plataformas__imagens {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            padding: 20px 40px;
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+
+        .sobre {
+            display: flex;
+            flex-direction: column-reverse;
+            img {
+                max-width: 850px;
+                margin-top: -15px;
+                margin-bottom: 20px;
+            }
+            .sobre__texto {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                
+            }
+        }
+    }
+}

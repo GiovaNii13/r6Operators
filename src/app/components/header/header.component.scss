@@ -19,35 +19,227 @@
     }
 
     .header__links {
-        margin-right: 10rem;
+        margin-right: 4rem;
         display: flex;
-        width: 150px;
+        width: 180px;
         justify-content: space-between;
         align-items: center;
         a {
+            transition: transform 0.3s ease;
             text-decoration: none;
             color: whitesmoke;
-            .header__links {
-                margin-right: 10rem;
-                display: flex;
-                width: 150px;
-                justify-content: space-between;
-                align-items: center;
-                a {
-                    text-decoration: none;
-                    color: whitesmoke;
-                    border-bottom: 2px solid transparent;
-                    transition: border-bottom 0.4s ease;
-                    &:hover {
-                        border-color: aqua;
-                        cursor: pointer;
-                    }
-                }
-            }
+            border-bottom: 2px solid transparent;
             &:hover {
-                border-bottom: 2px solid aqua;
+                border-color: aqua;
                 cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+
+        .active {
+            padding: 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}
+
+.header__logado {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        margin-left: 3rem;
+        transition: transform 0.3s ease;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+
+    .header__links--logado {
+        margin-right: 4rem;
+        display: flex;
+        width: 250px;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: whitesmoke;
+            border-bottom: 2px solid transparent;
+            &:hover {
+                border-color: aqua;
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+
+        .active {
+            padding: 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .dropdown-menu {
+            li {
+                transition: transform 0.7s ease;
+                &:hover {
+                    background-color: #0D6EFD;
+                    color: white;
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
             }
         }
     }
+
+    .container__edit {
+        position: fixed;
+        top: 10%;
+        right: 50%;
+        z-index: 1000;
+        min-width: 300px;
+        width: 50vw;
+        min-height: 75vh;
+    }
+
+    .logOut {
+        border-radius: 15px;
+        font-size: 15px;
+        color: black;
+        background-color: white;
+        position: fixed;
+        top: 40%;
+        right: 40%;
+        z-index: 9998;
+        width: 250px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        column-gap: 10px;
+
+        .btns__logOut {
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn {
+                width: 80px;
+                padding: 4px 0  !important;
+            }
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .delete {
+        border-radius: 15px;
+        font-size: 15px;
+        color: black;
+        background-color: white;
+        position: fixed;
+        top: 40%;
+        right: 40%;
+        z-index: 9998;
+        width: 290px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        column-gap: 10px;
+
+        .btns__delete {
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn {
+                width: 80px;
+                padding: 4px 0  !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        display: flex;
+        img {
+            max-width: 150px;
+            margin: 15px;
+        }
+
+        .header__links {
+            margin-right: 10px;
+            width: 150px;
+
+            .active {
+                padding: 2px 4px;
+                font-size: 17px;
+            }
+        }
+    }
+
+    .header__logado {
+        display: flex;
+        img {
+            max-width: 150px;
+            margin: 15px;
+        }
+
+        .header__links--logado {
+            margin-right: 10px;
+            width: 200px;
+            font-size: 12px;
+
+            .active {
+                padding: 2px 4px;
+                font-size: 15px;
+            }
+        }
+
+        .container__edit {
+            left: 1%;
+        }
+
+        .logOut {
+            right: 20%;
+        }
+
+        .delete {
+            right: 16%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
+    .container__edit {
+        right: 6%;
+    }
+
+    .logOut {
+        left: 35%;
+    }
+
+    .delete {
+        left: 35%;    }
 }

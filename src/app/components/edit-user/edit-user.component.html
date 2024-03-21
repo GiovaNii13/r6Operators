@@ -1,0 +1,58 @@
+<form novalidate [formGroup]="formularioCadastro" (ngSubmit)="editSubmit()">
+    <div class="container__cadastro">
+        <div class="caixa__cadastro">
+            <div class="caixa__titulo--cancelar">
+                <div class="titulo__cadastro">
+                    <img src="../../../assets/images/logoR6Black-removebg-preview.png" width="23px" height="40px" alt="" style="border-radius: 50px;">
+                    <h3>Editar</h3>
+                </div>
+                <svg (click)="closeEdit()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                </svg>
+            </div>
+            <div class="form-group mb-4">
+                <input type="text" class="form-control" id="nome" placeholder="*Nome Completo" formControlName="nome" [ngClass]="aplicaCssErro('nome')">
+            </div>
+            <div class="form-group mb-4">
+                <input type="email" disabled="true" class="form-control" id="email" placeholder="*Email" formControlName="email" [ngClass]="aplicaCssErro('email')">
+                <div *ngIf="emailCadastrado" class="email__cadastrado alert-danger">Este email já está cadastrado</div>
+            </div>
+            <div class="form-group mb-4">
+                <input type="password" class="form-control" id="senha" placeholder="*Senha (Min 8 - Max 15)" formControlName="senha" [ngClass]="aplicaCssErro('senha')">
+            </div>
+            <div formGroupName="endereco">
+                <div class="form-row row">
+                    <h3>Endereço</h3>
+                    <div class="form-group col-md-4 mb-3">
+                        <input type="text" class="form-control input__cep" id="cep" placeholder="*CEP" formControlName="cep"
+                        [ngClass]="aplicaCssErro('endereco.cep')" (blur)="consultaCEP()">
+                    </div>
+                    <div class="form-group col-md-8 mb-3">
+                        <input type="text" disabled="true" class="form-control input__rua" id="rua" placeholder="*Rua" formControlName="rua" [ngClass]="aplicaCssErro('endereco.rua')">
+                    </div>
+                </div>
+                <div class="form-row row">
+                    <div class="form-group col-md-4 mb-3">
+                        <input type="text" class="form-control input__numero" id="numero" placeholder="*Número" formControlName="numero"  [ngClass]="aplicaCssErro('endereco.numero')">
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <input type="text" disabled="true" class="form-control input__bairro" id="bairro" placeholder="*Bairro" formControlName="bairro"  [ngClass]="aplicaCssErro('endereco.bairro')">
+                    </div>
+                    <div class="form-group col-md-2 mb-3 input__estado">
+                        <input type="text" disabled="true" class="form-control" id="estado" placeholder="*Estado" formControlName="estado" [ngClass]="aplicaCssErro('endereco.estado')">
+                    </div>
+                </div>
+                <div class="form-row row">
+                    <div class="form-group col-md-6 mb-3">
+                        <input type="text" disabled="true" class="form-control input__cidade" id="cidade" placeholder="*Cidade" formControlName="cidade" [ngClass]="aplicaCssErro('endereco.cidade')">
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <input type="text" class="form-control" id="complemento" placeholder="Complemento" formControlName="complemento">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Editar</button>
+        </div>   
+    </div>
+</form>

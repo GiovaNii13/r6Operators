@@ -1,0 +1,754 @@
+{
+  "usuario": [
+    {
+      "id": "4177",
+      "nome": "teste",
+      "email": "teste@gmail.com",
+      "senha": "teste123",
+      "endereco": {
+        "cep": "17402652",
+        "numero": "29",
+        "complemento": "",
+        "rua": "Rua Naudert da Silva Braga",
+        "bairro": "Jardim São Benedito",
+        "cidade": "Garça",
+        "estado": "SP"
+      }
+    },
+    {
+      "id": "750d",
+      "nome": "Lil vi",
+      "email": "lil@gmail.com",
+      "senha": "123456789",
+      "endereco": {
+        "cep": "17402652",
+        "numero": "02",
+        "complemento": "17",
+        "rua": "Rua Naudert da Silva Braga",
+        "bairro": "Jardim São Benedito",
+        "cidade": "Garça",
+        "estado": "SP"
+      }
+    }
+  ],
+  "operadores": [
+    {
+      "nome": "ash",
+      "sexo": "Feminino",
+      "nacionalidade": "Estados Unidos",
+      "grupo": "FBI SWAT",
+      "imagem": "assets/operatorSVG/ash.svg",
+      "banner": "assets/bannerOperators/ash.png",
+      "id": "b167",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "castle",
+      "sexo": "masculino",
+      "nacionalidade": "estados unidos",
+      "grupo": "fbi swat",
+      "imagem": "assets/operatorSVG/castle.svg",
+      "banner": "assets/bannerOperators/castle.png",
+      "id": "8527",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "thermite",
+      "sexo": "Masculino",
+      "nacionalidade": "Estados Unidos",
+      "grupo": "FBI SWAT",
+      "imagem": "assets/operatorSVG/thermite.svg",
+      "banner": "assets/bannerOperators/thermite.png",
+      "id": "8793",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "pulse",
+      "sexo": "masculino",
+      "nacionalidade": "estados unidos",
+      "grupo": "fbi swat",
+      "imagem": "assets/operatorSVG/pulse.svg",
+      "banner": "assets/bannerOperators/pulse.png",
+      "id": "5484",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "twitch",
+      "sexo": "Feminino",
+      "nacionalidade": "França",
+      "grupo": "GIGN",
+      "imagem": "assets/operatorSVG/twitch.svg",
+      "banner": "assets/bannerOperators/twitch.png",
+      "id": "632c",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "doc",
+      "sexo": "masculino",
+      "nacionalidade": "frança",
+      "grupo": "gign",
+      "imagem": "assets/operatorSVG/doc.svg",
+      "banner": "assets/bannerOperators/doc.png",
+      "id": "a360",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "montagne",
+      "sexo": "Masculino",
+      "nacionalidade": "França",
+      "grupo": "GIGN",
+      "imagem": "assets/operatorSVG/montagne.svg",
+      "banner": "assets/bannerOperators/montagne.png",
+      "id": "27b7",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "rook",
+      "sexo": "masculino",
+      "nacionalidade": "frança",
+      "grupo": "gign",
+      "imagem": "assets/operatorSVG/rook.svg",
+      "banner": "assets/bannerOperators/rook.png",
+      "id": "628b",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "iq",
+      "sexo": "Feminino",
+      "nacionalidade": "Alemanha",
+      "grupo": "GSG 9",
+      "imagem": "assets/operatorSVG/iq.svg",
+      "banner": "assets/bannerOperators/iq.png",
+      "id": "8725",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "jager",
+      "sexo": "masculino",
+      "nacionalidade": "alemanha",
+      "grupo": "gsg 9",
+      "imagem": "assets/operatorSVG/jager.svg",
+      "banner": "assets/bannerOperators/jager.png",
+      "id": "d771",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "blitz",
+      "sexo": "Masculino",
+      "nacionalidade": "Alemanha",
+      "grupo": "GSG 9",
+      "imagem": "assets/operatorSVG/blitz.svg",
+      "banner": "assets/bannerOperators/blitz.png",
+      "id": "894b",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "bandit",
+      "sexo": "masculino",
+      "nacionalidade": "alemanha",
+      "grupo": "gsg 9",
+      "imagem": "assets/operatorSVG/bandit.svg",
+      "banner": "assets/bannerOperators/bandit.png",
+      "id": "e90d",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "fuze",
+      "sexo": "Masculino",
+      "nacionalidade": "Rússia",
+      "grupo": "Spetsnaz",
+      "imagem": "assets/operatorSVG/fuze.svg",
+      "banner": "assets/bannerOperators/fuze.png",
+      "id": "1f0d",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "kapkan",
+      "sexo": "masculino",
+      "nacionalidade": "rússia",
+      "grupo": "spetsnaz",
+      "imagem": "assets/operatorSVG/kapkan.svg",
+      "banner": "assets/bannerOperators/kapkan.png",
+      "id": "f4d7",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "glaz",
+      "sexo": "Masculino",
+      "nacionalidade": "Rússia",
+      "grupo": "Spetsnaz",
+      "imagem": "assets/operatorSVG/glaz.svg",
+      "banner": "assets/bannerOperators/glaz.png",
+      "id": "3c66",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "tachanka",
+      "sexo": "masculino",
+      "nacionalidade": "rússia",
+      "grupo": "spetsnaz",
+      "imagem": "assets/operatorSVG/tachanka.svg",
+      "banner": "assets/bannerOperators/tachanka.png",
+      "id": "1d8f",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "sledge",
+      "sexo": "Masculino",
+      "nacionalidade": "Reino Unido",
+      "grupo": "SAS",
+      "imagem": "assets/operatorSVG/sledge.svg",
+      "banner": "assets/bannerOperators/sledge.png",
+      "id": "96ab",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "mute",
+      "sexo": "masculino",
+      "nacionalidade": "reino unido",
+      "grupo": "sas",
+      "imagem": "assets/operatorSVG/mute.svg",
+      "banner": "assets/bannerOperators/mute.png",
+      "id": "d034",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "thatcher",
+      "sexo": "Masculino",
+      "nacionalidade": "Reino Unido",
+      "grupo": "SAS",
+      "imagem": "assets/operatorSVG/thatcher.svg",
+      "banner": "assets/bannerOperators/thatcher.png",
+      "id": "96d0",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "smoke",
+      "sexo": "masculino",
+      "nacionalidade": "reino unido",
+      "grupo": "sas",
+      "imagem": "assets/operatorSVG/smoke.svg",
+      "banner": "assets/bannerOperators/smoke.png",
+      "id": "3bbd",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "capitao",
+      "sexo": "Masculino",
+      "nacionalidade": "Brasil",
+      "grupo": "BOPE",
+      "imagem": "assets/operatorSVG/capitao.svg",
+      "banner": "assets/bannerOperators/capitao.png",
+      "id": "1857",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "caveira",
+      "sexo": "feminino",
+      "nacionalidade": "brasil",
+      "grupo": "bope",
+      "imagem": "assets/operatorSVG/caveira.svg",
+      "banner": "assets/bannerOperators/caveira.png",
+      "id": "e736",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "buck",
+      "sexo": "Masculino",
+      "nacionalidade": "Canadá",
+      "grupo": "JTF2",
+      "imagem": "assets/operatorSVG/buck.svg",
+      "banner": "assets/bannerOperators/buck.png",
+      "id": "1f91",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "frost",
+      "sexo": "feminino",
+      "nacionalidade": "canadá",
+      "grupo": "jtf2",
+      "imagem": "assets/operatorSVG/frost.svg",
+      "banner": "assets/bannerOperators/frost.png",
+      "id": "8425",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "blackbeard",
+      "sexo": "Masculino",
+      "nacionalidade": "Estados Unidos",
+      "grupo": "Navy SEALs",
+      "imagem": "assets/operatorSVG/blackbeard.svg",
+      "banner": "assets/bannerOperators/blackbeard.png",
+      "id": "22b4",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "valkyrie",
+      "sexo": "feminino",
+      "nacionalidade": "estados unidos",
+      "grupo": "navy seals",
+      "imagem": "assets/operatorSVG/valkyrie.svg",
+      "banner": "assets/bannerOperators/valkyrie.png",
+      "id": "71c5",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "hibana",
+      "sexo": "Feminino",
+      "nacionalidade": "Japão",
+      "grupo": "S.A.T.",
+      "imagem": "assets/operatorSVG/hibana.svg",
+      "banner": "assets/bannerOperators/hibana.png",
+      "id": "8543",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "echo",
+      "sexo": "masculino",
+      "nacionalidade": "japão",
+      "grupo": "sat",
+      "imagem": "assets/operatorSVG/echo.svg",
+      "banner": "assets/bannerOperators/echo.png",
+      "id": "41ee",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "jackal",
+      "sexo": "Masculino",
+      "nacionalidade": "Espanha",
+      "grupo": "G.E.O.",
+      "imagem": "assets/operatorSVG/jackal.svg",
+      "banner": "assets/bannerOperators/jackal.png",
+      "id": "63c2",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "mira",
+      "sexo": "feminino",
+      "nacionalidade": "espanha",
+      "grupo": "geo",
+      "imagem": "assets/operatorSVG/mira.svg",
+      "banner": "assets/bannerOperators/mira.png",
+      "id": "4051",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "ying",
+      "sexo": "Feminino",
+      "nacionalidade": "China",
+      "grupo": "SDU",
+      "imagem": "assets/operatorSVG/ying.svg",
+      "banner": "assets/bannerOperators/ying.png",
+      "id": "0d1f",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "lesion",
+      "sexo": "masculino",
+      "nacionalidade": "hong kong",
+      "grupo": "sdu",
+      "imagem": "assets/operatorSVG/lesion.svg",
+      "banner": "assets/bannerOperators/lesion.png",
+      "id": "c278",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "zofia",
+      "sexo": "Feminino",
+      "nacionalidade": "Polônia",
+      "grupo": "GROM",
+      "imagem": "assets/operatorSVG/zofia.svg",
+      "banner": "assets/bannerOperators/zofia.png",
+      "id": "8e1f",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "ela",
+      "sexo": "feminino",
+      "nacionalidade": "polônia",
+      "grupo": "grom",
+      "imagem": "assets/operatorSVG/ela.svg",
+      "banner": "assets/bannerOperators/ela.png",
+      "id": "32bd",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "dokkaebi",
+      "sexo": "Feminino",
+      "nacionalidade": "Coreia do Sul",
+      "grupo": "707th SMB",
+      "imagem": "assets/operatorSVG/dokkaebi.svg",
+      "banner": "assets/bannerOperators/dokkaebi.png",
+      "id": "5d92",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "vigil",
+      "sexo": "masculino",
+      "nacionalidade": "coreia do sul",
+      "grupo": "707th smb",
+      "imagem": "assets/operatorSVG/vigil.svg",
+      "banner": "assets/bannerOperators/vigil.png",
+      "id": "c679",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "maestro",
+      "sexo": "masculino",
+      "nacionalidade": "itália",
+      "grupo": "grif",
+      "imagem": "assets/operatorSVG/maestro.svg",
+      "banner": "assets/bannerOperators/maestro.png",
+      "id": "49ea",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "alibi",
+      "sexo": "feminino",
+      "nacionalidade": "itália",
+      "grupo": "grif",
+      "imagem": "assets/operatorSVG/alibi.svg",
+      "banner": "assets/bannerOperators/alibi.png",
+      "id": "916a",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "lion",
+      "sexo": "Masculino",
+      "nacionalidade": "França",
+      "grupo": "CBRN",
+      "imagem": "assets/operatorSVG/lion.svg",
+      "banner": "assets/bannerOperators/lion.png",
+      "id": "bfd0",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "finka",
+      "sexo": "Feminino",
+      "nacionalidade": "Rússia",
+      "grupo": "CBRN",
+      "imagem": "assets/operatorSVG/finka.svg",
+      "banner": "assets/bannerOperators/finka.png",
+      "id": "81d2",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "maverick",
+      "sexo": "Masculino",
+      "nacionalidade": "Estados Unidos",
+      "grupo": "GSUTR",
+      "imagem": "assets/operatorSVG/maverick.svg",
+      "banner": "assets/bannerOperators/maverick.png",
+      "id": "9c2b",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "clash",
+      "sexo": "feminino",
+      "nacionalidade": "reino unido",
+      "grupo": "sas",
+      "imagem": "assets/operatorSVG/clash.svg",
+      "banner": "assets/bannerOperators/clash.png",
+      "id": "9c95",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "nomad",
+      "sexo": "Feminino",
+      "nacionalidade": "Marrocos",
+      "grupo": "GIGR",
+      "imagem": "assets/operatorSVG/nomad.svg",
+      "banner": "assets/bannerOperators/nomad.png",
+      "id": "83b0",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "kaid",
+      "sexo": "masculino",
+      "nacionalidade": "marrocos",
+      "grupo": "gigr",
+      "imagem": "assets/operatorSVG/kaid.svg",
+      "banner": "assets/bannerOperators/kaid.png",
+      "id": "11ef",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "gridlock",
+      "sexo": "Feminino",
+      "nacionalidade": "Austrália",
+      "grupo": "SASR",
+      "imagem": "assets/operatorSVG/gridlock.svg",
+      "banner": "assets/bannerOperators/gridlock.png",
+      "id": "891a",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "mozzie",
+      "sexo": "masculino",
+      "nacionalidade": "austrália",
+      "grupo": "sasr",
+      "imagem": "assets/operatorSVG/mozzie.svg",
+      "banner": "assets/bannerOperators/mozzie.png",
+      "id": "0bb8",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "nokk",
+      "sexo": "Feminino",
+      "nacionalidade": "Dinamarca",
+      "grupo": "Jaeger Corps",
+      "imagem": "assets/operatorSVG/nokk.svg",
+      "banner": "assets/bannerOperators/nokk.png",
+      "id": "823b",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "warden",
+      "sexo": "masculino",
+      "nacionalidade": "estados unidos",
+      "grupo": "secret service",
+      "imagem": "assets/operatorSVG/warden.svg",
+      "banner": "assets/bannerOperators/warden.png",
+      "id": "1cc1",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "amaru",
+      "sexo": "Feminino",
+      "nacionalidade": "Peru",
+      "grupo": "AGR",
+      "imagem": "assets/operatorSVG/amaru.svg",
+      "banner": "assets/bannerOperators/amaru.png",
+      "id": "2b2f",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "goyo",
+      "sexo": "masculino",
+      "nacionalidade": "méxico",
+      "grupo": "fuerzas especiales",
+      "imagem": "assets/operatorSVG/goyo.svg",
+      "banner": "assets/bannerOperators/goyo.png",
+      "id": "5c92",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "kali",
+      "sexo": "Feminino",
+      "nacionalidade": "India",
+      "grupo": "SSG",
+      "imagem": "assets/operatorSVG/kali.svg",
+      "banner": "assets/bannerOperators/kali.png",
+      "id": "1b9c",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "wamai",
+      "sexo": "masculino",
+      "nacionalidade": "kenya",
+      "grupo": "nighthaven",
+      "imagem": "assets/operatorSVG/wamai.svg",
+      "banner": "assets/bannerOperators/wamai.png",
+      "id": "5464",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "iana",
+      "sexo": "Feminino",
+      "nacionalidade": "Rússia",
+      "grupo": "GSUTR",
+      "imagem": "assets/operatorSVG/iana.svg",
+      "banner": "assets/bannerOperators/iana.png",
+      "id": "97bd",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "oryx",
+      "sexo": "masculino",
+      "nacionalidade": "jordânia",
+      "grupo": "nakhshun",
+      "imagem": "assets/operatorSVG/oryx.svg",
+      "banner": "assets/bannerOperators/oryx.png",
+      "id": "fcf1",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "ace",
+      "sexo": "Masculino",
+      "nacionalidade": "Noruega",
+      "grupo": "NIGHTHAVEN",
+      "imagem": "assets/operatorSVG/ace.svg",
+      "banner": "assets/bannerOperators/ace.png",
+      "id": "cdc7",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "melusi",
+      "sexo": "feminino",
+      "nacionalidade": "áfrica do sul",
+      "grupo": "nakoda",
+      "imagem": "assets/operatorSVG/melusi.svg",
+      "banner": "assets/bannerOperators/melusi.png",
+      "id": "7a63",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "zero",
+      "sexo": "Masculino",
+      "nacionalidade": "Estados Unidos",
+      "grupo": "NightHaven",
+      "imagem": "assets/operatorSVG/zero.svg",
+      "banner": "assets/bannerOperators/zero.png",
+      "id": "af69",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "flores",
+      "sexo": "Masculino",
+      "nacionalidade": "Argentina",
+      "grupo": "Nighthaven",
+      "imagem": "assets/operatorSVG/flores.svg",
+      "banner": "assets/bannerOperators/flores.png",
+      "id": "4d61",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "osa",
+      "sexo": "Feminino",
+      "nacionalidade": "França",
+      "grupo": "DGSE",
+      "imagem": "assets/operatorSVG/osa.svg",
+      "banner": "assets/bannerOperators/osa.avif",
+      "id": "1667",
+      "tipo": "ataque"
+    },
+    {
+      "nome": "aruni",
+      "sexo": "feminino",
+      "nacionalidade": "tailândia",
+      "grupo": "nighthaven",
+      "imagem": "assets/operatorSVG/aruni.svg",
+      "banner": "assets/bannerOperators/aruni.png",
+      "id": "517d",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "thunderbird",
+      "sexo": "feminino",
+      "nacionalidade": "canadá",
+      "grupo": "nunavut",
+      "imagem": "assets/operatorSVG/thunderbird.svg",
+      "banner": "assets/bannerOperators/thunderbird.png",
+      "id": "d846",
+      "tipo": "defesa"
+    },
+    {
+      "nome": "thorn",
+      "sexo": "feminino",
+      "nacionalidade": "reino unido",
+      "grupo": "mi5",
+      "imagem": "assets/operatorSVG/thorn.svg",
+      "banner": "assets/bannerOperators/thorn.png",
+      "id": "ba2e",
+      "tipo": "defesa"
+    }
+  ],
+  "mapas": [
+    {
+      "nome": "Banco",
+      "localizacao": "Estados Unidos",
+      "imagem": "assets/mapas/banco.webp",
+      "id": "df56"
+    },
+    {
+      "nome": "Covil",
+      "localizacao": "Portugal",
+      "imagem": "assets/mapas/covil.avif",
+      "id": "db3c"
+    },
+    {
+      "nome": "Laboratórios Nighthaven",
+      "localizacao": "Costeiras",
+      "imagem": "assets/mapas/laboratorio.jpg",
+      "id": "a84b"
+    },
+    {
+      "nome": "Planíce Esmeralda",
+      "localizacao": "Irlanda",
+      "imagem": "assets/mapas/planice.webp",
+      "id": "ab83"
+    },
+    {
+      "nome": "Fronteira",
+      "localizacao": "Oriente Médio",
+      "imagem": "assets/mapas/fronteira.jpg",
+      "id": "91b8"
+    },
+    {
+      "nome": "Casa de campo",
+      "localizacao": "Alemanha",
+      "imagem": "assets/mapas/clubhouse.jpg",
+      "id": "e11f"
+    },
+    {
+      "nome": "Chalé",
+      "localizacao": "França",
+      "imagem": "assets/mapas/chale.webp",
+      "id": "2bf8"
+    },
+    {
+      "nome": "Litoral",
+      "localizacao": "Espanha",
+      "imagem": "assets/mapas/litoral.webp",
+      "id": "8646"
+    },
+    {
+      "nome": "Consulado",
+      "localizacao": "Costa do Marfim",
+      "imagem": "assets/mapas/consulado.avif",
+      "id": "ca74"
+    },
+    {
+      "nome": "Café Dotoyevsky",
+      "localizacao": "Rússia",
+      "imagem": "assets/mapas/cafeD.webp",
+      "id": "71be"
+    },
+    {
+      "nome": "Canal",
+      "localizacao": "Alemanha",
+      "imagem": "assets/mapas/canal.webp",
+      "id": "febc"
+    },
+    {
+      "nome": "Oregon",
+      "localizacao": "Estados Unidos",
+      "imagem": "assets/mapas/oregon.webp",
+      "id": "edb0"
+    },
+    {
+      "nome": "Outback",
+      "localizacao": "Austrália",
+      "imagem": "assets/mapas/outback.webp",
+      "id": "a1c4"
+    },
+    {
+      "nome": "Arranha Céu",
+      "localizacao": "Japão",
+      "imagem": "assets/mapas/arranhaCeu.webp",
+      "id": "7c37"
+    },
+    {
+      "nome": "Mansão",
+      "localizacao": "Itália",
+      "imagem": "assets/mapas/mansao.webp",
+      "id": "ecb4"
+    },
+    {
+      "nome": "Parque Temático",
+      "localizacao": "China",
+      "imagem": "assets/mapas/parque.avif",
+      "id": "fe26"
+    }
+  ]
+}
