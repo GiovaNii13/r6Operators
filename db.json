@@ -1,21 +1,6 @@
 {
   "usuario": [
     {
-      "id": "4177",
-      "nome": "teste",
-      "email": "teste@gmail.com",
-      "senha": "teste123",
-      "endereco": {
-        "cep": "17402652",
-        "numero": "29",
-        "complemento": "",
-        "rua": "Rua Naudert da Silva Braga",
-        "bairro": "Jardim São Benedito",
-        "cidade": "Garça",
-        "estado": "SP"
-      }
-    },
-    {
       "id": "750d",
       "nome": "Lil vi",
       "email": "lil@gmail.com",
@@ -24,6 +9,21 @@
         "cep": "17402652",
         "numero": "02",
         "complemento": "17",
+        "rua": "Rua Naudert da Silva Braga",
+        "bairro": "Jardim São Benedito",
+        "cidade": "Garça",
+        "estado": "SP"
+      }
+    },
+    {
+      "id": "c831",
+      "nome": "teste alves",
+      "email": "teste@gmail.com",
+      "senha": "teste123",
+      "endereco": {
+        "cep": "17402652",
+        "numero": "2944",
+        "complemento": "Casa",
         "rua": "Rua Naudert da Silva Braga",
         "bairro": "Jardim São Benedito",
         "cidade": "Garça",
@@ -415,7 +415,7 @@
     {
       "nome": "lion",
       "sexo": "Masculino",
-      "nacionalidade": "França",
+      "nacionalidadedizer que": "França",
       "grupo": "CBRN",
       "imagem": "assets/operatorSVG/lion.svg",
       "banner": "assets/bannerOperators/lion.png",

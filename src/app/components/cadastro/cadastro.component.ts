@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { timer } from 'rxjs';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { ConsultaService } from 'src/app/services/consulta.service';
 import { User } from 'src/app/user';

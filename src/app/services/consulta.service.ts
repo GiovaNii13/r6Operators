@@ -9,9 +9,6 @@ import { environment } from "src/environments/environment";
 export class ConsultaService {
 
   constructor(private _http: HttpClient) {}
-
-
-
   consultaCep(cep: string) {
     cep = cep.replace(/\D/g, '');
     if (cep !== '') {
