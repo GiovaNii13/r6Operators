@@ -29,6 +29,7 @@ export class OperatorsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.filtros.padrao = true;
     this.consultaService.getAllOperators().subscribe(data => {
       this.operadores = data.map((operador: Operator) => {
         return {
