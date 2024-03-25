@@ -46,10 +46,10 @@ export class LoginComponent implements OnInit {
       const senha = this.formularioLogin.get('senha').value;
       this.authService.verificaLogin(email, senha)
       .subscribe(contaExistente => {
-        let a = contaExistente.filter( e => e.email == email && e.senha == senha)
-        localStorage.setItem('user-infos', JSON.stringify(a[0]));
+        let contaLogada = contaExistente.filter( e => e.email == email && e.senha == senha)
+        localStorage.setItem('user-infos', JSON.stringify(contaLogada[0]));
         
-        if (a.length) {
+        if (contaLogada.length) {
           this.userExistente = true;
           this.usuarioInvalido = false;
           this.router.navigate(['/home']);
