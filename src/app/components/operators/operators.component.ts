@@ -14,16 +14,19 @@ export class OperatorsComponent implements OnInit {
   operadorSelecionado: Operator[];
   operadorDigitado: string
 
-  filtragemAtacantes: boolean = false;
-  filtragemDefensores: boolean = false;
-  filtragemAlfabetica: boolean = false;
-  filtragemAlfabeticaReversa: boolean = false;
+  filtros = {
+    ordemAlfabetica: false,
+    ordemAlfabeticaReversa: false,
+    atacantes: false,
+    defensores: false,
+    padrao: false,
+    filtragemPorDigitacao: false
+  };
   detalhesOperador: boolean = false;
-  filtragemPorDigitacao: boolean = false;
-  filtragemPadrao: boolean = true;
- 
-
-  constructor(private consultaService: ConsultaService) { }
+   
+  constructor(
+    private consultaService: ConsultaService
+    ) { }
 
   ngOnInit(): void {
     this.consultaService.getAllOperators().subscribe(data => {
@@ -44,29 +47,21 @@ export class OperatorsComponent implements OnInit {
   aplicarFiltragens(): void {
     this.operadoresFiltrados = [...this.operadores];
 
-    if (this.filtragemAtacantes) {
+    if (this.filtros.atacantes) {
       this.operadoresFiltrados = this.operadoresFiltrados.filter(operador => operador.tipo === 'ataque');
     }
-
-    else if (this.filtragemDefensores) {
+    else if (this.filtros.defensores) {
       this.operadoresFiltrados = this.operadoresFiltrados.filter(operador => operador.tipo === 'defesa');
     }
 
-    else if (this.filtragemAlfabetica) {
+    else if (this.filtros.ordemAlfabetica) {
       this.operadoresFiltrados.sort((a, b) => a.nome.localeCompare(b.nome));
     }
 
-    else if (this.filtragemAlfabeticaReversa) {
+    else if (this.filtros.ordemAlfabeticaReversa) {
       this.operadoresFiltrados.sort((a, b) => b.nome.localeCompare(a.nome));
-    }
-
-    else if (this.filtragemPorDigitacao) {
-      this.operadoresFiltrados = this.operadoresFiltrados.filter(operador => operador.nome.toLowerCase().startsWith(this.removerAcentos(this.operadorDigitado)));
-      if (this.operadorDigitado.length == 0) {
-        this.operadoresFiltrados = [...this.operadores]
-      }
     } 
-    else if (this.filtragemPadrao) {
+    else if (this.filtros.padrao) {
       this.operadoresFiltrados = [...this.operadores]
     }
   }
@@ -74,46 +69,23 @@ export class OperatorsComponent implements OnInit {
   mostrarDetalhesDoOperador(operador: Operator[]) {
     this.detalhesOperador = true;
     this.operadorSelecionado = operador;
-
   }
 
-  turnOnOrdemAlfabetica() {
-    this.filtragemPorDigitacao = false;
-    this.filtragemAlfabetica = true;
-    this.filtragemAlfabeticaReversa = false;
-    this.filtragemAtacantes = false;
-    this.filtragemDefensores = false;
-    this.filtragemPadrao = false;
-    this.aplicarFiltragens();
+  limparCampo() {
+    this.operadorDigitado = '';
+    this.operadoresFiltrados = [...this.operadores];
+    this.filtros.padrao = true;
   }
 
-  turnOnOrdemAlfabeticaReversa() {
-    this.filtragemPorDigitacao = false;
-    this.filtragemAlfabetica = false;
-    this.filtragemAlfabeticaReversa = true;
-    this.filtragemAtacantes = false;
-    this.filtragemDefensores = false;
-    this.filtragemPadrao = false;
-    this.aplicarFiltragens();
-  }
-
-  turnOnAtacantes() {
-    this.filtragemPorDigitacao = false;
-    this.filtragemAlfabetica = false;
-    this.filtragemAlfabeticaReversa = false;
-    this.filtragemAtacantes = true;
-    this.filtragemDefensores = false;
-    this.filtragemPadrao = false;
-    this.aplicarFiltragens();
-  }
-
-  turnOnDefensores() {
-    this.filtragemPorDigitacao = false;
-    this.filtragemAlfabetica = false;
-    this.filtragemAlfabeticaReversa = false;
-    this.filtragemAtacantes = false;
-    this.filtragemDefensores = true;
-    this.filtragemPadrao = false;
+  toggleFiltro(filtro: string) {
+    this.filtros[filtro] = !this.filtros[filtro];
+    if (this.filtros[filtro]) {
+      Object.keys(this.filtros).forEach(key => {
+        if (key !== filtro) {
+          this.filtros[key] = false;
+        }
+      });
+    }
     this.aplicarFiltragens();
   }
 
@@ -121,35 +93,10 @@ export class OperatorsComponent implements OnInit {
     this.detalhesOperador = false;
   }
 
-  buscarOperadorDigitado() {
-    this.filtragemAlfabetica = false;
-    this.filtragemAlfabeticaReversa = false;
-    this.filtragemAtacantes = false;
-    this.filtragemDefensores = false;
-    this.filtragemPorDigitacao = true;
-    this.aplicarFiltragens();
+  filtrarPorDigitacao(texto: string): void {
+    this.operadoresFiltrados = this.operadores.filter(operador =>
+      operador.nome.toLowerCase().startsWith(texto.toLowerCase())
+    );
   }
 
-  limparCampo() {
-    this.operadorDigitado = '';
-    this.operadoresFiltrados = [...this.operadores];
-    this.filtragemPadrao = true;
-  }
-
-
-  listaDefault() {
-    this.filtragemAlfabetica = false;
-    this.filtragemAlfabeticaReversa = false;
-    this.filtragemAtacantes = false;
-    this.filtragemDefensores = false;
-    this.filtragemPorDigitacao = false;
-    this.filtragemPadrao = true;
-    this.aplicarFiltragens();
-  }
-
-  fintroOn() {
-    if(this.filtragemAlfabetica || this.filtragemAlfabeticaReversa
-      || this.filtragemAtacantes || this.filtragemDefensores || this.filtragemPadrao)
-      return
-  }
 }

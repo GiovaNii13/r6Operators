@@ -8,7 +8,7 @@
           <nav class="navbar bg-body-primary">
               <div class="container-fluid">
                   <form class="d-flex" role="search">
-                      <input class="form-control me-1 input__filter" (search)="limparCampo()" (keyup)="buscarOperadorDigitado()" type="search" placeholder="Busque um operador" aria-label="Search" style="width: 30vw;" name="operadorDigitado" [(ngModel)]="operadorDigitado">
+                      <input class="form-control me-1 input__filter" (search)="limparCampo()" (input)="filtrarPorDigitacao($event.target.value)" type="search" placeholder="Busque um operador" aria-label="Search" style="width: 30vw;" name="operadorDigitado" [(ngModel)]="operadorDigitado">
                       <div class="dropdown-center">
                         <button class="btn button__filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                           <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-funnel" viewBox="0 0 16 16">
@@ -16,23 +16,14 @@
                           </svg>
                         </button>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-item" (click)="turnOnOrdemAlfabetica()" [ngClass]="{
-                              'ativo': filtragemAlfabetica
-                            }">A-Z</li>
-                            <li class="dropdown-item" (click)="turnOnOrdemAlfabeticaReversa()" [ngClass]="{
-                              'ativo': filtragemAlfabeticaReversa
-                            }" >Z-A</li>
-                          <li class="dropdown-item" (click)="turnOnAtacantes()" [ngClass]="{
-                            'ativo': filtragemAtacantes
-                          }">Ataque</li>
-                          <li class="dropdown-item" (click)="turnOnDefensores()" [ngClass]="{
-                            'ativo': filtragemDefensores
-                          }">Defesa</li>
-                          <li class="dropdown-item" (click)="listaDefault()" [ngClass]="{
-                            'ativo': filtragemPadrao
-                          }">Padrão</li>
+                          <li class="dropdown-item" (click)="toggleFiltro('ordemAlfabetica')" [ngClass]="{ 'ativo': filtros.ordemAlfabetica }">A-Z</li>
+                          <li class="dropdown-item" (click)="toggleFiltro('ordemAlfabeticaReversa')" [ngClass]="{ 'ativo': filtros.ordemAlfabeticaReversa }">Z-A</li>
+                          <li class="dropdown-item" (click)="toggleFiltro('atacantes')" [ngClass]="{ 'ativo': filtros.atacantes }">Ataque</li>
+                          <li class="dropdown-item" (click)="toggleFiltro('defensores')" [ngClass]="{ 'ativo': filtros.defensores }">Defesa</li>
+                          <li class="dropdown-item" (click)="toggleFiltro('padrao')" [ngClass]="{ 'ativo': filtros.padrao }">Padrão</li>
                         </ul>
                       </div>
+                      
                   </form>
               </div>
           </nav>
