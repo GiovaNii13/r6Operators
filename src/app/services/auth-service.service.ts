@@ -14,7 +14,16 @@ export class AuthServiceService {
 
   private usuarioLogadoSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  constructor(private _http: HttpClient) {}
+  constructor(private _http: HttpClient) {
+    this.verificarAutenticacaoInicial();
+  }
+
+  private verificarAutenticacaoInicial() {
+    const userInfo = localStorage.getItem('user-infos');
+    if (userInfo) {
+      this.usuarioLogadoSubject.next(true);
+    }
+  }
 
   cadastrarUsuario(usuario: any): Observable<any> {
     return this._http.post<any>(environment.apiUrlUsers, usuario);
